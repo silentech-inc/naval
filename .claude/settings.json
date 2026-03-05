@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "description": "Frontend: format, lint, typecheck",
+        "command": "cd frontend && npm run format 2>&1 | tail -5 && npm run check 2>&1 | tail -20"
+      },
+      {
+        "description": "Backend: lint and format check",
+        "command": "cd backend && uv run ruff check . 2>&1 | tail -20 && uv run ruff format --check . 2>&1 | tail -10"
+      }
+    ]
+  }
+}

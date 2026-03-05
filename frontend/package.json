@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint src/",
     "typecheck": "tsc --noEmit",
+    "format": "eslint src/ --fix",
     "check": "npm run lint && npm run typecheck"
   },
   "keywords": [],
